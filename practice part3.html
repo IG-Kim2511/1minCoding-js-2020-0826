@@ -98,51 +98,92 @@
       document.write(" querySelector.");
       console.log("querySelector");
 
-// query selector
-// css
-var mailTitle = document.querySelector('#main-title small');
-console.log(mailTitle);
+      // query selector
+      // css
+      var mailTitle = document.querySelector("#main-title small");
+      console.log(mailTitle);
 
-// border
-// style.border
-var il = document.querySelectorAll('.ilbuni');
-il[0].style.border = '10px solid red';
-il[1].style.border = '100px solid blue'
+      // border
+      // style.border
+      var il = document.querySelectorAll(".ilbuni");
+      il[0].style.border = "10px solid red";
+      il[1].style.border = "100px solid blue";
 
-// for
-for (let i = 0; i < il.length; i++) {
-    
-    il[i].style.border=`10px solid red`;
-    
-}
+      // for
+      for (let i = 0; i < il.length; i++) {
+        il[i].style.border = `10px solid red`;
+      }
 
-// il.forEach(element => {
-//     il.style.border=`10px solid red`;
-// });
+      // il.forEach(element => {
+      //     il.style.border=`10px solid red`;
+      // });
 
-// il.forEach(function(i){
-//   copy.push(i);
-// });
+      // il.forEach(function(i){
+      //   copy.push(i);
+      // });
 
-// class illbuni a
+      // class illbuni a
 
-var link = document.querySelector('.ilbuni a');
-console.log(link);
+      var link = document.querySelector(".ilbuni a");
+      console.log(link);
 
+      // get attribute
 
-// get attribute
+      var link = document.querySelector(".ilbuni a");
+      console.log(link.getAttribute("href"));
 
-var link = document.querySelector('.ilbuni a');
-console.log(link.getAttribute('href'));
+      console.log(link.getAttribute("class"));
 
-console.log(link.getAttribute('class'));
+      // set attribute
 
-// set attribute
+      var link = document.querySelector(".ilbuni a");
+      link.setAttribute("href", "http://studiomeal.com");
+      console.log(link.getAttribute(`href`));
 
-var link = document.querySelector('.ilbuni a');
-link.setAttribute('href','http://studiomeal.com');
-console.log(link.getAttribute(`href`));
+      // getter return
+      // setter no return
 
+      link.setAttribute("href", "https://naber.com");
+      console.log(link.setAttribute("href", "https://daum.net"));
+
+      // .class name : change class name link google special
+
+      var link = document.querySelector(".ilbuni a");
+      link.className = "special";
+
+      // class list.add
+
+      link.classList.add("special");
+
+      link.classList.remove("link-googlle");
+
+      // 2 seconds : set tiime out(function(){},2000)
+
+      setTimeout(() => {
+        link.classList.remove("link-google");
+      }, 2000);
+
+      console.log(link.classList.contains("special"));
+
+      //
+      // js html <li>gogo</li>
+
+      // crearte elemetn
+
+      var listElem = document.createElement("li");
+
+      listElem.innerHTML = "<span>일분이</span>";
+
+      console.log(listElem);
+
+      // append child
+      // ui. li
+      // apendChild . ui. li
+
+      var ilbuniMom = document.querySelector(".ilbuni-mom");
+      var listElem = document.createElement("li");
+      listElem.innerHTML = "<span>ddd</span>";
+      ilbuniMom.appendChild(listElem);
     </script>
   </body>
 </html>
