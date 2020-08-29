@@ -42,6 +42,10 @@
       // var a = 100;
       // var b = 1;
       // a = 200;
+      // function(){
+      //   x=10;
+
+      // }
 
       // console.log(a, b);
 
@@ -76,6 +80,154 @@
       }
       //argument
       더하기(1, 100);
+
+      function name(param) {
+        console.log(`hi? my name is ${param}. nice to meet`);
+      }
+
+      name(`kiki`);
+
+      function 인사(이름) {
+        console.log("안녕? 나는" + 이름 + "이야. ");
+      }
+
+      인사("키민");
+
+      // return
+
+      // return and function
+
+      function name() {
+        return;
+        console.log(`zzz`);
+      }
+      name();
+
+      //
+      // if false rturen
+
+      var a = 100;
+
+      function name3() {
+        if (a < 0) {
+          return;
+        }
+        console.log(`xxx`);
+      }
+      name3();
+
+      function name4(param1, param2) {
+        return param1 + param2;
+      }
+      console.log(name4(2, 5));
+
+      // return without. undefinte
+
+      function name5(p1, p2) {
+        document.write(p1 + p2);
+      }
+
+      var h = name5(11, 222);
+      console.log(h);
+
+      document.querySelector("h1").style.height = h + "px";
+
+      // document.querySelector(`h1`).style.height= h+`px`;
+
+      //returon with. style coding
+      function name6(p1, p2) {
+        document.write(p1 + p2);
+        return p1 + p2;
+      }
+
+      var h = name6(11, 222);
+      console.log(h);
+
+      document.querySelector("h1").style.height = h + "px";
+      // document.querySelector(`h1`).style.height = h + "px";
+      // document.querySelector(`h1`).style.height = `${h} + px`;
+
+      //  scope
+
+      function name7() {
+        var a = "a inside name7 ";
+        var b = 200;
+
+        console.log(a);
+      }
+      name7();
+
+      //
+
+      var jejudo = {
+        a: 100,
+        b: 200,
+        c: 300,
+
+        configMap: {
+          device: null,
+          total: 0,
+        },
+      };
+      console.log(jejudo.b);
+      console.log(jejudo.configMap.total);
+
+      // object
+      document.write("object");
+      console.log("object");
+
+      var person = {
+        first: "jone",
+        last: "doe",
+        id: 55,
+        fullName: function () {
+          return this.first + " " + this.last;
+        },
+      };
+      console.log(person.fullName());
+
+      var object2 = {
+        username: "z",
+        age: 20,
+        introduce: function () {
+          console.log(`hi? i'm ${this.username} nice to meet you`);
+        },
+      };
+      object2.introduce();
+
+      console.log(object2.age);
+
+      //
+
+      var object3 = {};
+      object3.username = "kiki3";
+      object3.age = 12;
+
+      object3.introduce = function () {
+        console.log(`hi? I'm ${this.username}`);
+      };
+      object3.introduce();
+
+      //
+      console.log(`constructor`);
+
+      //  constructor and instance
+
+      function Person(username, age) {
+        this.username = username;
+        this.age = age;
+        this.introduce = function () {
+          console.log(
+            `hi? my name is ${this.username}. my age is ${this.age}.`
+          );
+        };
+      }
+
+      var p1 = new Person("a", 2);
+      var p2 = new Person("a2", 22);
+
+      p1.introduce();
+      p2.introduce();
     </script>
   </body>
 </html>

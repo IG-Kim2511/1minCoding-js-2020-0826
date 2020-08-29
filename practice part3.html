@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3</title>
+
+    <style>
+      body {
+        font-size: 3rem;
+      }
+      h1 {
+        background-color: aqua;
+      }
+
+      #main-title small {
+      }
+      .ilbuni {
+        display: inline-block;
+        list-style: none;
+      }
+      .ilbuni img {
+        width: 100px;
+      }
+      .link-google {
+        color: red;
+      }
+      .special {
+        background: pink;
+      }
+    </style>
+
+    <script>
+      // get element by id: query selector
+
+      //       var title = document.querySelector(`main-title`);
+      //       console.log(title);
+
+      //       //
+      //       window.onload = function () {
+      //         var title = document.querySelector("#main-title");
+      //         console.log(title);
+      //       };
+
+      //     //    add even tlistener
+
+      // window.addEventListener(`load`,function(){
+      //     var title = document.querySelector(`#main-title`);
+      //     console.log(title);
+      // });
+    </script>
+  </head>
+  <body>
+    <h2>1분코딩 JavaScript part3 dom</h2>
+
+    <h1 id="main-title">
+      DOM - Document Object model
+
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <small>small</small>
+    </h1>
+    <h6>
+      <br />
+      getElementById <br />
+      getElementsByTagName
+    </h6>
+
+    <ul class="ilbuni-mom">
+      <li class="ilbuni">
+        <img src="iu.jpg" />
+        <a class="link-google" href="https://google.com">Google</a>
+      </li>
+
+      <li class="ilbuni"><img src="sana.jpg" /></li>
+      <li class="ilbuni"><img src="iu3.jpg" /></li>
+    </ul>
+
+    <script>
+      // part3
+      document.write(`part3`);
+      console.log(`part3`);
+
+      // body
+      // get elements by tag name
+
+      var title = document.getElementById("main-title");
+      var titleSpan = title.getElementsByTagName("span");
+
+      console.log(titleSpan);
+      console.log(title);
+
+      console.log(titleSpan[0]);
+
+      // query selector
+
+      document.write(" querySelector.");
+      console.log("querySelector");
+
+// query selector
+// css
+var mailTitle = document.querySelector('#main-title small');
+console.log(mailTitle);
+
+// border
+// style.border
+var il = document.querySelectorAll('.ilbuni');
+il[0].style.border = '10px solid red';
+il[1].style.border = '100px solid blue'
+
+// for
+for (let i = 0; i < il.length; i++) {
+    
+    il[i].style.border=`10px solid red`;
+    
+}
+
+// il.forEach(element => {
+//     il.style.border=`10px solid red`;
+// });
+
+// il.forEach(function(i){
+//   copy.push(i);
+// });
+
+// class illbuni a
+
+var link = document.querySelector('.ilbuni a');
+console.log(link);
+
+
+// get attribute
+
+var link = document.querySelector('.ilbuni a');
+console.log(link.getAttribute('href'));
+
+console.log(link.getAttribute('class'));
+
+// set attribute
+
+var link = document.querySelector('.ilbuni a');
+link.setAttribute('href','http://studiomeal.com');
+console.log(link.getAttribute(`href`));
+
+    </script>
+  </body>
+</html>
