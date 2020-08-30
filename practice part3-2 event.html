@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-2</title>
+    <style>
+        .btn{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h2>3.2 event</h2>
+    <br>
+    <h1 id="main-title">event</h1>
+    
+    <h1>event: click, mouse moving wheel, load e vent</h1>
+
+    <button class="btn">click here</button>
+
+    <script>
+
+        // p3
+
+        // document.write();
+        // 
+
+// btn click and font color changing
+
+var btn = document.querySelector('.btn');
+
+// h1 tag color
+
+var mainTitle= document.querySelector('#main-title');
+
+//  styel
+
+function btnClicklistener(){
+    mainTitle.style.background = 'dodgerblue';
+}
+
+// 
+btn.addEventListener('click',btnClicklistener);
+    </script>
+</body>
+</html>
