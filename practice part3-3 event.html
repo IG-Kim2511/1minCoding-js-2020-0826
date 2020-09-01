@@ -35,63 +35,87 @@
     </nav>
 
     <script>
-                  // part3
-                  document.write();
-                  console.log();
+      // part3
+      document.write();
+      console.log();
 
-                  //  5-1w
+      //  5-1w
 
+      // var menuLinks = document.querySelectorAll(".menu-link");
 
-                  var menuLinks = document.querySelectorAll('.menu-link');
+      // for (let i = 0; i < menuLinks.length; i++) {
+      //   menuLinks[i].addEventListener("click", clickMenuListener);
+      // }
 
-            for (let i = 0; i < menuLinks.length; i++) {
-              menuLinks[i].addEventListener('click',clickMenuListener);
-            }
+      // function clickMenuListener() {
+      //   for (let i = 0; i < menuLinks.length; i++) {
+      //     menuLinks[i].classList.remove("menu-active");
+      //   }
+      //   this.classList.add("menu-active");
+      // }
 
-            function clickMenuListener(){
-               for (let i = 0; i < menuLinks.length; i++) {
-                menuLinks[i].classList.remove('menu-active');
-              }
-      this.classList.add('menu-active');
-            }
+      //
 
+      var menuLinks = document.querySelectorAll(".menu-link");
 
+      for (let i = 0; i < menuLinks.length; i++) {
+        menuLinks[i].addEventListener("click", clickMenuListener);
+      }
+      function clickMenuListener() {
+        for (let i = 0; i < menuLinks.length; i++) {
+          menuLinks[i].classList.remove("menu-active");
+        }
 
+        this.classList.add("menu-active");
+      }
 
+      //       var menuLinks = document.querySelectorAll(".menu-link");
+      //       function clickMenuHandler() {
+      //          for (let i = 0; i < menuLinks.length; i++) {
+      //           // const element = array[index];
+      //           menuLinks[i].classList.remove("menu-active");
+      //         }
+      //         this.classList.add("menu-active");
+      //       }
 
+      // for (var i = 0; i < menuLinks.length; i++) {
+      //         menuLinks[i].addEventListener("click", clickMenuHandler);
+      //       }
 
+      // 5-2w
 
-                  //       var menuLinks = document.querySelectorAll(".menu-link");
-                  //       function clickMenuHandler() {
-                  //          for (let i = 0; i < menuLinks.length; i++) {
-                  //           // const element = array[index];
-                  //           menuLinks[i].classList.remove("menu-active");
-                  //         }
-                  //         this.classList.add("menu-active");
-                  //       }
+      // var menuLinks = document.querySelectorAll(".menu-link");
 
-                  // for (var i = 0; i < menuLinks.length; i++) {
-                  //         menuLinks[i].addEventListener("click", clickMenuHandler);
-                  //       }
+      // function clickMenuHandler() {
+      //   var activeMenu = document.querySelector(".menu-active");
+      //   if (activeMenu) {
+      //     activeMenu.classList.remove("menu-active");
+      //   }
+      //   this.classList.add("menu-active");
+      // }
+      // for (var i = 0; i < menuLinks.length; i++) {
+      //   menuLinks[i].addEventListener("click", clickMenuHandler);
+      // }
 
-                  // 5-2w
+      // 5-3w.menu
 
-                  // var menuLinks = document.querySelectorAll(".menu-link");
+      //
 
-                  // function clickMenuHandler() {
-                  //   var activeMenu = document.querySelector(".menu-active");
-                  //   if (activeMenu) {
-                  //     activeMenu.classList.remove("menu-active");
-                  //   }
-                  //   this.classList.add("menu-active");
-                  // }
-                  // for (var i = 0; i < menuLinks.length; i++) {
-                  //   menuLinks[i].addEventListener("click", clickMenuHandler);
-                  // }
+      // 5-5w
+      var currentMenu;
+      var menu = document.querySelector(".menu");
 
-                  // 5-3w.menu
+      menu.addEventListener("click", clickHandler);
 
-                  var currentMenu;
+      function clickHandler(e) {
+        if (currentMenu) {
+          currentMenu.classList.remove("menu-active");
+        }
+        e.target.classList.add("menu-active");
+        currentMenu = e.target;
+      }
+
+      var currentMenu;
     </script>
   </body>
 </html>
