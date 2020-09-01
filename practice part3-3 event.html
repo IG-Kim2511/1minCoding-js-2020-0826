@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3-3</title>
+    <style>
+      .menu {
+        display: flex;
+      }
+      .menu-link {
+        margin: 0.1em;
+        padding: 0.3em;
+        color: black;
+        text-decoration: none;
+        background-color: dodgerblue;
+        list-style: none;
+      }
+      .menu-active {
+        background: orange;
+      }
+      .menu {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>3-3 event</h2>
+
+    <h1 id="main-title">event</h1>
+    <nav class="menu">
+      <a href="#" class="menu-link" data-menu="1">menu 1</a>
+      <a href="#" class="menu-link" data-menu="2">menu 2</a>
+      <a href="#" class="menu-link" data-menu="3">menu 3</a>
+    </nav>
+
+    <script>
+                  // part3
+                  document.write();
+                  console.log();
+
+                  //  5-1w
+
+
+                  var menuLinks = document.querySelectorAll('.menu-link');
+
+            for (let i = 0; i < menuLinks.length; i++) {
+              menuLinks[i].addEventListener('click',clickMenuListener);
+            }
+
+            function clickMenuListener(){
+               for (let i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].classList.remove('menu-active');
+              }
+      this.classList.add('menu-active');
+            }
+
+
+
+
+
+
+
+                  //       var menuLinks = document.querySelectorAll(".menu-link");
+                  //       function clickMenuHandler() {
+                  //          for (let i = 0; i < menuLinks.length; i++) {
+                  //           // const element = array[index];
+                  //           menuLinks[i].classList.remove("menu-active");
+                  //         }
+                  //         this.classList.add("menu-active");
+                  //       }
+
+                  // for (var i = 0; i < menuLinks.length; i++) {
+                  //         menuLinks[i].addEventListener("click", clickMenuHandler);
+                  //       }
+
+                  // 5-2w
+
+                  // var menuLinks = document.querySelectorAll(".menu-link");
+
+                  // function clickMenuHandler() {
+                  //   var activeMenu = document.querySelector(".menu-active");
+                  //   if (activeMenu) {
+                  //     activeMenu.classList.remove("menu-active");
+                  //   }
+                  //   this.classList.add("menu-active");
+                  // }
+                  // for (var i = 0; i < menuLinks.length; i++) {
+                  //   menuLinks[i].addEventListener("click", clickMenuHandler);
+                  // }
+
+                  // 5-3w.menu
+
+                  var currentMenu;
+    </script>
+  </body>
 </html>
